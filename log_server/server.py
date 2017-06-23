@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-
-
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import yaml
 
@@ -28,3 +25,7 @@ class Server():
         except Exception as e:
             # FIXME this not nice
             print(e)
+
+
+def log_entry_parser(log_entry):
+    return log_entry
