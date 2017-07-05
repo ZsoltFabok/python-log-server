@@ -1,0 +1,12 @@
+[Unit]
+Description=Log server service
+ 
+[Service]
+PIDFile=/run/log_server/pid
+User=<USER>
+Group=<GROUP>
+WorkingDirectory=<DIR>
+ExecStart=bin/python -m log_server config/config.yml
+
+[Install]
+WantedBy=multi-user.target
