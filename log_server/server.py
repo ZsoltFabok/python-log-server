@@ -51,4 +51,4 @@ class Server():
 def log_entry_parser(log_entry_raw):
     log_entry = parse.unquote(log_entry_raw.decode())
     log_data = dict([(x.split('=')[0], x.split('=')[1]) for x in log_entry.split('&')])
-    return [log_data['asctime'].replace('+', ' '), log_data['name'], log_data['levelname'], log_data['message'].replace('+', ' ')]
+    return [log_data['asctime'].replace('+', ' '), log_data['name'].replace('+', ' '), log_data['levelname'], log_data['message'].replace('+', ' ')]
