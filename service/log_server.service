@@ -6,7 +6,7 @@ PIDFile=/run/log_server/pid
 User=<USER>
 Group=<GROUP>
 WorkingDirectory=<DIR>
-ExecStart=bin/python -m log_server config/config.yml
+ExecStart=bin/python -m log_server <CONFIG_FILE>
 
 [Install]
 WantedBy=multi-user.target
